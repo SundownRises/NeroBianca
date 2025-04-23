@@ -1,119 +1,139 @@
-🎮 NeroBianca: The Trustless Gaming Asset Marketplace
-Gaming deals must be black and white, not gray.
+# 🎮 NeroBianca: A Trustless Game-Asset Marketplace
 
-NeroBianca is a decentralized, trustless gaming asset marketplace that brings in-game items and account data on-chain using the power of the NERO Chain, Account Abstraction (AA), and Paymaster infrastructure.
+**Gaming deals must be black and white, not gray.**
 
-🚀 What It Does
-🔐 Automated Wallet Onboarding
-Web2 sign-in (email, OAuth) triggers invisible smart-contract wallet creation on NERO Chain.
+NeroBianca is a concise, trustless game-asset marketplace bringing in-game items and account data on-chain using the **NERO Chain** with **Account Abstraction (AA)** and **Paymaster** mechanisms.
 
-Uses NERO's AA-Platform for seamless, gasless onboarding.
+---
 
-🤝 Trustless Escrow Trading
-Game assets (skins, accounts, etc.) are locked in custom smart contracts.
+## 🔧 What It Does
 
-Items are released only upon mutual confirmation or arbiter approval.
+### ✅ Automated Wallet Onboarding
+- Users sign in via Web2 accounts (email, OAuth).
+- Smart-contract wallets are deployed invisibly using AA on NERO Chain.
+- Seamless onboarding — no native tokens or wallets needed.
 
-Arbiters validate transactions and earn reputation tokens.
+### 🔐 Trustless Escrow Trading
+- In-game assets (skins, accounts, progression) are locked in a bespoke escrow contract.
+- Release only on mutual confirmation or via arbiter approval.
+- Arbiters earn reputation tokens for validation.
 
-⛽ Gas Sponsorship & Token Payments
-Gasless onboarding with 10–15 free transactions (Type-0).
+### ⛽ Gas Sponsorship & Token Payments
+- **Type-0 (Free Gas):** 10–15 free transactions per new user.
+- **Type-1 (ERC-20 Gas):** After quota, users pay with USDC, WETH — no NERO tokens needed.
+- Cleaner UX with gas auto-deducted from ERC-20 balances.
 
-After quota: Users pay gas in ERC-20 tokens (e.g. USDC, WETH) (Type-1).
+### 🔁 Smart Contract Escrow
+- Trustless trades using atomic swaps.
+- Escrow holds both assets & funds.
+- Dispute resolution powered by verified arbiters.
 
-Native token not required. Clean, simple UX.
+### 🏅 On-Chain Reputation with Soul-Bound Tokens (SBTs)
+- SBTs issued to buyers, sellers, and arbiters after trades.
+- Non-transferable and immutable – reflects user credibility.
+- Used for trust scores and arbiter eligibility.
 
-📜 Smart Contract-Powered Escrow
-Built using OpenZeppelin’s Escrow and AccessControl libraries.
+### 🔄 Permanent Gasless Trading for Trusted Users
+- Lifetime gas sponsorship for reliable users.
+- Funded via escrow contract fees.
+- Incentivizes loyalty and good behavior.
 
-Atomic swaps upon successful trade fulfillment.
+### 🔐 Security-First UX
+- No session keys or background delegation.
+- All actions explicitly signed for full control and minimized abuse risk.
 
-Integrated arbiter-based dispute resolution.
+---
 
-🏅 On-Chain Reputation via Soulbound Tokens (SBTs)
-Non-transferable SBTs issued post-trade to all parties (buyers, sellers, arbiters).
+## 💡 The Problem It Solves
 
-Builds a trust layer with visible, verifiable reputation.
+- ❌ **Complex Onboarding:** Manual wallets & crypto purchases.
+- ❌ **Scams & Theft:** $6M+ in stolen CS:GO skins in 2022.
+- ❌ **Fragmented Platforms:** No unified, tamper-proof asset marketplace for cross-platform games.
 
-🌟 Permanent Gasless Trading for VIPs
-High-trust users (reliable traders & arbiters) enjoy lifetime gas sponsorship.
+✅ **NeroBianca Fixes That** with:
+- Smart-contract escrow trading.
+- On-chain credibility via SBTs.
+- Seamless, gasless entry and trading.
 
-Funded by a portion of escrow contract fees.
+---
 
-🔒 Security-First Approach
-No session keys. Every transaction is explicitly signed.
+## 🔗 Game Support
 
-No background delegation. User-first control.
+### 🔫 PUBG & CS:GO (Steam)
+- Steam Market integration for skins & accounts.
+- CS:GO supports peer-to-peer trading.
 
-❓ Why NeroBianca?
-Pain Points Solved
+### 🚢 Modern Warships (Mobile)
+- In-game trading of ships, missiles, gear.
+- Dynamic, supply-demand economy.
 
-Problem	Solution
-Complex onboarding & gas fees	Invisible wallets & sponsored gas via NERO Paymaster
-Scam-prone third-party markets	Smart contract-based escrow with arbiter resolution
-Fragmented cross-game trading	Unified, on-chain marketplace with account abstraction
-🧱 Technologies Used
-🔗 Blockchain & Smart Contracts
-NERO Chain w/ Blockspace 2.0 & Account Abstraction
+### 🎮 Overwatch 2
+- Cross-platform account merging & skin sync.
 
-Solidity w/ OpenZeppelin’s Escrow + AccessControl
+### ⚔️ Warframe
+- Cross-play & cross-save support.
 
-Foundry for testing & deployment
+### 🥊 Brawlhalla
+- Unified progression across PC, console, mobile.
 
-🖥️ Frontend & Auth
-Next.js (SSR)
+### 🚗 Rocket League
+- Cross-platform item trading via Epic accounts.
 
-RainbowKit / Wagmi for wallet connectivity
+---
 
-Web2 login (OAuth, passkeys)
+## 🛠️ Technologies Used
 
-🗄️ Storage & Hosting
-Lighthouse.storage (encrypted, token-gated access)
+### 🔗 Blockchain & Account Abstraction
+- NERO Chain (Blockspace 2.0, ERC-4337 AA)
+- AA-Platform Paymaster for sponsored gas
 
-Vercel for hosting
+🔗 [docs.nerochain.io](https://docs.nerochain.io)
 
-🧩 How It Works
-Wallet & Paymaster Setup
-Configure AA flows via NERO’s AA Docs
+### 🧠 Smart Contracts
+- Solidity
+- OpenZeppelin's Escrow & AccessControl
 
-Deploy escrow & periphery contracts
+🔗 [OpenZeppelin Docs](https://docs.openzeppelin.com/)
 
-Attach Paymaster API for gas sponsorship
+### 🌐 Frontend & Auth
+- **Next.js** (SSR)
+- **RainbowKit** / **Wagmi** for wallet connect
+- Web2 login + passkey authentication
 
-Escrow Contract Development
-Lock → Validate → Release pattern
+### 📦 Storage & Hosting
+- **Lighthouse.storage** for encrypted metadata
+- **Vercel** for frontend
+- **Foundry** for testing/deployment
 
-Arbiter-based resolution with reputation token issuance
+---
 
-Soulbound Token System
-Minted post-trade
+## 🧱 Architecture Overview
 
-Reflects credibility, arbitration feedback, and platform trust
+### 1. AA Wallet & Paymaster
+- UserOperation flows with gasless transactions.
+- Paymaster API integration with escrow contracts.
 
-🕹️ Target Games & Use Cases
+### 2. Escrow Contract Logic
+- Minimal-trust `lock → validate → release` pattern.
+- Based on OpenZeppelin’s base escrow.
 
-Game	Feature
-CS:GO	Peer-to-peer trading, Steam Market
-PUBG	Skin & account trading
-Modern Warships	In-game marketplace with dynamic pricing
-Overwatch 2	Cross-platform progression & account merging
-Warframe	Cross-play & cross-save
-Brawlhalla	Full cross-platform play
-Rocket League	Inventory sync via Epic Games
-⚠️ The Problem With Existing Platforms
-🚨 Example: $6M CS:GO Skins Stolen in 2022
-Platforms like Tradeit.gg and CS.MONEY have suffered major breaches due to lack of trustless trading.
+### 3. Frontend Integration
+- Next.js + AA SDK
+- Real-time status, Paymaster policy handling
 
-🔒 Our Solution
-Smart contract-based, trustless trading
+### 4. Reputation Engine
+- Non-transferable SBT contract.
+- Tracks trade completion & arbiter feedback.
 
-Soulbound tokens for reputation
+---
 
-Real-time monitoring, fraud prevention & user education
+## 📣 Learn More
 
-📚 Read: CS:GO $6M Theft News
+- [Nero Chain Documentation](https://docs.nerochain.io)
+- [OpenZeppelin Escrow](https://docs.openzeppelin.com/contracts/)
+- [Vitalik on Soul-Bound Tokens](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)
+- [CS:GO Theft News](https://www.pcgamer.com/csgo-skin-scam-2022/)
+- [Tradeit.gg](https://tradeit.gg/)
 
-📄 Documentation
-🔗 NERO Chain Docs
+---
 
-📘 OpenZeppelin Docs
